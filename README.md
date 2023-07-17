@@ -12,3 +12,4 @@ To meet the requirements set by the company, the developed model emphasizes expl
 
 The project's deliverables include four models for predicting the urgency score, which can be implemented by the company across its various clients. Additionally, an algorithm for generating artificial data and a hierarchical model for grouping data based on common characteristics were developed.
 The algorithms were implemented using Python and are shared as part of this project.
+The order of the files is: 1. new_data_generalization, 2. Atlantic&Avera, 3. Hierarchical_Model, 4. Models
