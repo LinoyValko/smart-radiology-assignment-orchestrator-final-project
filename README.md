@@ -1,5 +1,3 @@
-# Final-Project
-Final project of academic studies- ML models to predict patient urgency level 
 This final project was undertaken as part of my undergraduate studies in Digital Medical technologies at HIT College in Holon, Israel.
 
 The objective of this project was to develop a machine-learning algorithm that serves as the foundation for creating a decision support system tailored for radiologists. The system is designed to leverage patient information and will be implemented within Change HealthCare, a technology health company based in the USA.
