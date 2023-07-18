@@ -10,4 +10,9 @@ To meet the requirements set by the company, the developed model emphasizes expl
 
 The project's deliverables include four models for predicting the urgency score, which can be implemented by the company across its various clients. Additionally, an algorithm for generating artificial data and a hierarchical model for grouping data based on common characteristics were developed.
 The algorithms were implemented using Python and are shared as part of this project.
-The order of the files is: 1. new_data_generalization, 2. Atlantic&Avera, 3. Hierarchical_Model, 4. Models
+
+The order of the files is: 
+(1) Data_Generation- due to limited access to actual data, we employed a synthetic data generation approach using probabilities and values provided by the company to simulate realistic data in the absence of direct data access.
+(2) Atlantic&Avera- data preparation and exploration of data we received.
+(3) Hierarchical_Model- data preparation for a hierarchical model intended to cluster patient samples based on shared characteristics. The aim of this is to uncover patterns and similarities without depending on predefined rules that typically serve as ground truth for predictive models, since such rules were not consistently available.
+(4) Models- development of regression and classification models to predict the urgency score of patient samples.
