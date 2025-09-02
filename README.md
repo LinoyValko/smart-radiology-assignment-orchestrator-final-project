@@ -1,18 +1,83 @@
-This final project was undertaken as part of my undergraduate studies in Digital Medical technologies at HIT College in Holon, Israel.
+# Smart Radiology Orchestrator: ML-Based Urgency Prediction for Medical Imaging
 
-The objective of this project was to develop a machine-learning algorithm that serves as the foundation for creating a decision support system tailored for radiologists. The system is designed to leverage patient information and will be implemented within Change HealthCare, a technology health company based in the USA.
+**B.Sc. Final Project – Digital Medical Technologies, HIT**
 
-Currently, the process of prioritizing the interpretation of patient examinations is done manually by radiologists, relying on a score known as "urgency". This score is determined based on a set of rules that vary among Change HealthCare's different clients. However, this manual process carries inherent risks, necessitating the need for optimization and automation.
+---
 
-The initial goals of this project were to create a system that benefits the patient, improves the quality of treatment provided, and enhances the workflow of radiologists. These goals were pursued through the development of a machine-learning model capable of automatically prioritizing patient examinations. The model uses input parameters to define urgency and returns the corresponding urgency score as output.
+## Overview
 
-To meet the requirements set by the company, the developed model emphasizes explainability, ensuring that it does not operate as a "black box" and can provide insights into its results.
+This project was completed as part of a final undergraduate project at the Holon Institute of Technology (HIT) in collaboration with **Change Healthcare** (USA). The goal was to develop an AI-based decision support tool to assist radiologists in automatically prioritizing the interpretation of patient imaging exams, replacing the current manual “urgency” scoring system.
 
-The project's deliverables include four models for predicting the urgency score, which can be implemented by the company across its various clients. Additionally, an algorithm for generating artificial data and a hierarchical model for grouping data based on common characteristics were developed.
-The algorithms were implemented using Python and are shared as part of this project.
+---
 
-The order of the files is: 
-(1) Data_Generation- due to limited access to actual data, we employed a synthetic data generation approach using probabilities and values provided by the company to simulate realistic data in the absence of direct data access.
-(2) Atlantic&Avera- data preparation and exploration of data we received.
-(3) Hierarchical_Model- data preparation for a hierarchical model intended to cluster patient samples based on shared characteristics. The aim of this is to uncover patterns and similarities without depending on predefined rules that typically serve as ground truth for predictive models, since such rules were not consistently available.
-(4) Models- development of regression and classification models to predict the urgency score of patient samples.
+## Project Objectives
+
+- Build a **machine learning model** to predict urgency scores based on patient exam data.
+- Provide **explainable outputs** to align with clinical requirements.
+- Enable **client-specific integration** by using both real and synthetic datasets.
+- Optimize and automate the **workflow for radiologists**.
+
+---
+
+## Project Structure
+
+### 1. `Data_Generation.ipynb`  
+**Goal**: Generate synthetic data simulating real-world radiology exams.  
+**Details**:
+- Used probability distributions and feature ranges provided by Change Healthcare.
+- Simulated fields include demographics, modality, exam type, and initial urgency.
+
+---
+
+### 2. `Atlantic_&_Avera.ipynb`  
+**Goal**: Load and explore real de-identified datasets from two client hospitals: Atlantic and Avera.  
+**Details**:
+- Data loading, cleaning, and basic preprocessing.
+- Initial feature analysis and outcome distribution.
+- Validation of schema consistency and class balance.
+
+---
+
+### 3. `Hierarchical_Model.ipynb`  
+**Goal**: Build a hierarchical grouping model to cluster patient exams based on shared features.  
+**Details**:
+- Used unsupervised learning (clustering) to group similar exams.
+- Aimed to identify patient subgroups for downstream modeling.
+- Helps uncover structure in data **without relying on predefined urgency rules**.
+
+---
+
+### 4. `Models.ipynb`  
+**Goal**: Train ML models to predict urgency score.  
+**Details**:
+- Trained regression and classification models (e.g., Logistic Regression, Random Forest).
+- Performed cross-validation and model evaluation using precision, recall, accuracy.
+- Added explainability via feature importance and SHAP values.
+- Final models are ready for production use by Change Healthcare.
+
+---
+
+## Technologies Used
+
+- Python 3  
+- NumPy, Pandas  
+- Scikit-learn  
+- Seaborn, Matplotlib  
+- SHAP (for model explainability)  
+
+---
+
+## Deliverables
+
+- Trained urgency score prediction models  
+- Hierarchical grouping algorithm  
+- Synthetic data generator  
+- Ready-to-integrate pipeline for Change Healthcare systems
+
+---
+
+## 🤝 Acknowledgments
+
+Special thanks to the **Change Healthcare** team for data support and domain insights, and to the faculty of **HIT’s Department of Digital Medical Technologies** for academic supervision.
+
+---
